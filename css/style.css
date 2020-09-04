@@ -1,0 +1,346 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "BAHNSCHRIFT";
+  src: url("fonts/BAHNSCHRIFT.eot");
+  src: local("☺"), url("fonts/BAHNSCHRIFT.woff") format("woff"), url("fonts/BAHNSCHRIFT.ttf") format("truetype"), url("fonts/BAHNSCHRIFT.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BebasNeue";
+  src: url("fonts/BebasNeue Regular.eot");
+  src: local("☺"), url("fonts/BebasNeue Regular.woff") format("woff"), url("fonts/BebasNeue Regular.ttf") format("truetype"), url("fonts/BebasNeue Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TNR-KZ";
+  src: url("fonts/KZ.eot");
+  src: local("☺"), url("fonts/KZ.woff") format("woff"), url("fonts/KZ.ttf") format("truetype"), url("fonts/KZ.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 770px;
+  margin: 0 auto;
+}
+@media (max-width: 810px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.header {
+  background-color: #000;
+  padding: 25px 0;
+  border-bottom: 1px solid #666;
+  display: flex;
+  align-items: center;
+}
+.header__phone {
+  font-size: 20px;
+  text-align: center;
+}
+.header__phone a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hello {
+  background-color: #000;
+  border-bottom: 1px solid #666;
+}
+.hello__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+@media (max-width: 566px) {
+  .hello__body {
+    flex-direction: column;
+  }
+}
+.hello__logo img {
+  height: 200px;
+  cursor: pointer;
+}
+.hello__name {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+.hello__title {
+  font-size: 50px;
+  color: #fff;
+  font-family: "BAHNSCHRIFT";
+}
+.hello__subtitle {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 2;
+  color: #fff;
+  font-family: "BebasNeue";
+}
+
+.menu {
+  background-color: #000;
+}
+.menu__list {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 566px) {
+  .menu__list {
+    flex-direction: column;
+  }
+}
+.menu__list a {
+  font-size: 22px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "BAHNSCHRIFT";
+}
+.menu__list a:hover {
+  border-bottom: 1px solid #fff;
+}
+@media (max-width: 512px) {
+  .menu__list a:hover {
+    border: none;
+  }
+}
+
+.about {
+  background-color: #ffbe39;
+}
+.about__body {
+  padding: 20px 0;
+}
+.about__title {
+  font-size: 24px;
+  margin: 0 0 30px 0;
+  font-family: "BAHNSCHRIFT";
+}
+.about__subtitle p {
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "TNR-KZ";
+}
+
+.gallery {
+  background-color: #000;
+  border-bottom: 1px solid #666;
+}
+.gallery__body {
+  padding: 20px 0 0 0;
+}
+.gallery__title {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  font-family: "BAHNSCHRIFT";
+}
+.gallery__photo {
+  display: flex;
+  margin: 20px 0 20px 0;
+}
+.gallery__photo-item {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.gallery__photo-item:hover {
+  transform: scale(1.3);
+  transition: all 0.5s ease 0s;
+}
+.gallery__photo-item img {
+  border: 5px solid #ffbe39;
+  max-width: 100%;
+}
+.gallery__photo-item p {
+  margin: 10px 0 0 0;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-family: "TNR-KZ";
+}
+
+.footer {
+  background-color: #000;
+}
+.footer__body {
+  padding: 20px 0;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 566px) {
+  .footer__body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (max-width: 566px) {
+  .footer__social {
+    display: block;
+  }
+}
+.footer__social-email {
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+.footer__social-email a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "BebasNeue";
+}
+.footer__name {
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 566px) {
+  .footer__name {
+    display: block;
+    margin: 20px 0;
+  }
+}
+.footer__name-title {
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0 0 10px 0;
+  font-family: "BAHNSCHRIFT";
+}
+.footer__name-rights {
+  font-size: 16px;
+  font-family: "BebasNeue";
+}
+.footer__adress {
+  font-size: 16px;
+  color: #fff;
+  text-align: right;
+  line-height: 1.6;
+  font-family: "BebasNeue";
+}
+@media (max-width: 566px) {
+  .footer__adress {
+    display: block;
+    text-align: center;
+  }
+}
+
+.fa-instagram {
+  font-size: 24px;
+  color: #74309f;
+  opacity: 0.5;
+}
+.fa-instagram:hover {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+
+.fa-vk {
+  font-size: 24px;
+  color: #2b6eb2;
+  margin: 0 10px;
+  opacity: 0.5;
+}
+.fa-vk:hover {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+
+.fa-whatsapp {
+  font-size: 24px;
+  color: #3e9137;
+  opacity: 0.5;
+}
+.fa-whatsapp:hover {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
